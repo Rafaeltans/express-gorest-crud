@@ -1,0 +1,22 @@
+{
+  "name": "api-gorest",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Rafael",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.1",
+    "method-override": "^3.0.0",
+    "validator": "^13.15.15"
+  }
+}

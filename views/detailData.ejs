@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <h1>Detail Data</h1>
+            <% if (!goRestData) { %>
+             <h1>Data Tidak Ada</h1>
+            <% }else {%>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">ID: <%= goRestData.id %></h5>
+                        <h6 class="card-subtitle mb-2">Name: <%= goRestData.name %></h6>
+                        <h6 class="card-subtitle mb-2">Email: <%= goRestData.email %></h6>
+                        <h6 class="card-text mb-2">Gender: <%= goRestData.gender %> <br> Status: <%= goRestData.status %></h6>
+                        <a href="/" class="card-link">Back</a>
+                    </div>
+                </div>
+            <%}%>
+        </div>
+    </div>
+</div>

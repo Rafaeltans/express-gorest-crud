@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <h1>Ini Halaman Update</h1>
+
+            <form method="post" action="/update_data/<%= goRestData.id %>?_method=PUT">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" value="<%= goRestData.name %>">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" value="<%= goRestData.email %>">
+                </div>
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label> <br>
+
+                    <input type="radio" id="female" name="gender" value="female" <% if (goRestData.gender == 'female') { %> checked  <% } %>>
+                    <label for="female">Female</label><br>
+
+                    <input type="radio" id="male" name="gender" value="male" <% if (goRestData.gender == 'male') { %> checked <% } %>>
+                    <label for="male">Male</label>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label">Status</label><br>
+
+                    <input type="radio" id="active" name="status" value="active" <% if (goRestData.status=='active') { %> checked <% } %>>
+                    <label for="active">Active</label><br>
+
+                    <input type="radio" id="inactive" name="status" value="inactive" <% if (goRestData.status=='inactive') { %> checked <% } %>>
+                    <label for="inactive">Inactive</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <% if (msg.length!==0) { %>
+            <div class="alert alert-success mt-3" role="alert">
+                <%= msg %>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>

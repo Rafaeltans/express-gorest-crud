@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <h1>Add Data</h1>
+            <% if (msg.length!==0) { %>
+            <div class="alert alert-success mt-3" role="alert">
+                <%= msg %>
+            </div>
+            <% } %>
+            <form method="post" action="/add_Data">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label> <br>
+
+                    <!-- radrio -->
+                    <input type="radio" id="female" name="gender" value="female" checked>
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label">Status</label><br>
+
+                    <!-- Radio -->
+                    <input type="radio" id="active" name="status" value="active" checked>
+                    <label for="active">Active</label><br>
+                    <input type="radio" id="inactive" name="status" value="inactive">
+                    <label for="inactive">Inactive</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
